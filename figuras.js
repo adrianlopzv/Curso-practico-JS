@@ -1,13 +1,14 @@
 //Codigo del cuadrado
 console.group("Cuadrados")
-const ladoCuadrado = 5
-console.log('Los lados del cuadrado miden: ' + ladoCuadrado + "cm")
 
-const perimetroCuadrado = ladoCuadrado * 4
-console.log('El perimetro del cuadrado es: ' + perimetroCuadrado)
+// const ladoCuadrado = 5
+// console.log('Los lados del cuadrado miden: ' + ladoCuadrado + "cm")
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado
-console.log('El area del cuadrado es: ' + areaCuadrado + "cm²")
+perimetroCuadrado = lado =>  lado * 4
+// console.log('El perimetro del cuadrado es: ' + perimetroCuadrado)
+
+areaCuadrado = lado => lado * lado
+// console.log('El area del cuadrado es: ' + areaCuadrado + "cm²")
 console.groupEnd()
 
 //Codigo del triagulo
@@ -26,35 +27,40 @@ const alturaTriangulo = 5.5
 console.log("La altura del triangulo es de: " 
 + alturaTriangulo)
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo
-console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm")
+perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base
 
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2
-console.log("El area del triangulo es: " + areaTriangulo + 'cm²')
+// console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm")
+
+areaTriangulo = (base, altura) => (base * altura) / 2
+
+// const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2
+// console.log("El area del triangulo es: " + areaTriangulo + 'cm²')
 
 console.groupEnd()
 
-//Codigo del circulo
+//Codigo del circuloª
 console.group("Circulos")
 
 //Radio
-const radioCirculo = 4
-console.log("radio circulo es " + radioCirculo + "cm")
+// const radioCirculo = 4
+// console.log("radio circulo es " + radioCirculo + "cm")
 
 //Diametro
-const diametroCirculo = radioCirculo * 2
-console.log("Diametro del circulo es " + diametroCirculo + 'cm')
+diametroCirculo = radio => radio * 2
 
 //PI
 const PI = Math.PI 
 console.log("PI es: " + PI)
 
 //Circunferencia
-const perimetroCirculo = diametroCirculo * PI
-console.log("El perimetro del Ciruclo es: " + Math.floor(perimetroCirculo)  + "Cm")
+perimetroCirculo = radio => { 
+    const diametro = diametroCirculo(radio) 
+    return diametro * PI
+}
+// const perimetroCirculo = diametroCirculo * PI
+// console.log("El perimetro del Ciruclo es: " + Math.floor(perimetroCirculo)  + "Cm")
 
 //Area
-const areaCirculo = (radioCirculo * radioCirculo) * PI
-console.log("El area del circulo es: " + areaCirculo + "Cm")
+areaCirculo = radio => (radio * radio) * PI
 
 console.groupEnd()
