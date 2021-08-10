@@ -64,3 +64,21 @@ perimetroCirculo = radio => {
 areaCirculo = radio => (radio * radio) * PI
 
 console.groupEnd()
+
+//Interaccion con HTML
+calcularPerimetroCuadrado = () => {
+    const input = document.getElementById("InputCuadrado")
+    const value = input.value
+
+    const perimetro = perimetroCuadrado(value)
+    alert(perimetro)
+}
+
+calcularAreaCuadrado = () => {
+    const input = document.getElementById("InputCuadrado")
+    const value = input.value
+
+    const area = areaCuadrado(value)
+    alert(area)
+}
+
